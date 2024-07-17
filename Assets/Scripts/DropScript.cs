@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class DropScript : MonoBehaviour
 {
+    //script for GooberGame
+
     public GameObject matchingImage;
     private RectTransform slottableImage;
     private RectTransform thisRect;
@@ -32,6 +34,7 @@ public class DropScript : MonoBehaviour
             matchingImage.SetActive(false);
             thisImage.color = new Color(255, 255, 255);
             isSlotted = true;
+            MG.PartsSloted++;
         }
     }
 }
