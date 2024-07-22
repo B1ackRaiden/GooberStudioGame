@@ -6,7 +6,7 @@ public class DialScreenPop : MonoBehaviour
 {
     private GameObject TestDialogue;
     
-    void awake()
+    void Awake()
     {
         TestDialogue = GameObject.Find("DialoguePanel");
     }
