@@ -4,27 +4,35 @@ using UnityEngine;
 
 public class ScreenPop : MonoBehaviour
 {
-    private GameObject Minigame;
+    public GameObject Minigame;
+
+    public bool playerIsClose;
+
 
     // Start is called before the first frame update
-    void Awake()
-    {
-        Minigame = GameObject.Find("DJPanel");
-    }
 
     // Update is called once per frame
-    private void OnTriggerEnter2D(Collider2D collision)
+    void Update()
     {
-        if(collision.gameObject.tag == "Player")
+        if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
         {
             Minigame.SetActive(true);
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.tag == "Player")
+        if (other.CompareTag("Player"))
         {
+            playerIsClose = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerIsClose = false;
             Minigame.SetActive(false);
         }
     }
