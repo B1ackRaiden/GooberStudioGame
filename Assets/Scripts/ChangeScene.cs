@@ -1,22 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class ScreenPop : MonoBehaviour
+public class ChangeScene : MonoBehaviour
 {
-    public GameObject Minigame;
+    public int index;
+    public string levelName;
 
     public bool playerIsClose;
 
-
-    // Start is called before the first frame update
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
         {
-            Minigame.SetActive(true);
+            SceneManager.LoadScene(index);
+            SceneManager.LoadScene(levelName);
         }
     }
 
@@ -33,7 +32,6 @@ public class ScreenPop : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerIsClose = false;
-            Minigame.SetActive(false);
         }
     }
 }
