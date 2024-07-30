@@ -5,6 +5,7 @@ using UnityEngine;
 public class ScreenPop : MonoBehaviour
 {
     public GameObject Minigame;
+    public GameObject Minigame;
 
     public bool playerIsClose;
 
@@ -16,7 +17,8 @@ public class ScreenPop : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
         {
-            Minigame.SetActive(true);
+            playerIsClose = true;
+            interactBtn.SetActive(true);
         }
     }
 
@@ -36,4 +38,7 @@ public class ScreenPop : MonoBehaviour
             Minigame.SetActive(false);
         }
     }
+    // public void PressButton ()
+    // inert what should happen when i press this button
+    //assign this function to OnClick 
 }
