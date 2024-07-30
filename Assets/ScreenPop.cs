@@ -5,6 +5,7 @@ using UnityEngine;
 public class ScreenPop : MonoBehaviour
 {
     public GameObject Minigame;
+    public GameObject interactBtn;
 
     public bool playerIsClose;
 
@@ -25,6 +26,7 @@ public class ScreenPop : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerIsClose = true;
+            interactBtn.SetActive(true);
         }
     }
 
@@ -34,6 +36,8 @@ public class ScreenPop : MonoBehaviour
         {
             playerIsClose = false;
             Minigame.SetActive(false);
+            interactBtn.SetActive(false);
         }
     }
 }
+
