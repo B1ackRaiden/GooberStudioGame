@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//made by Jason Sanchez
+
 public class InteractScript : MonoBehaviour
 {
     public GameObject Interact;

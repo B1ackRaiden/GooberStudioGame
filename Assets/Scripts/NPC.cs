@@ -36,6 +36,11 @@ public class NPC : MonoBehaviour
         {
             contButton.SetActive(true);
         }
+
+        if(dialoguePanel.activeInHierarchy == false)
+        {
+            zeroText();
+        }
     }
 
     //resets dialogue when player leaves
