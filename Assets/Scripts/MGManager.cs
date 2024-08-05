@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MGManager : MonoBehaviour
 {
+    //Made by Jason Sanchez
+
     private DropScript DS;
     public int PartsSloted;
 

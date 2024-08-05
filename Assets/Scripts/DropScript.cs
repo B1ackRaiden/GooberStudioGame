@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class DropScript : MonoBehaviour
 {
-    //script for GooberGame
+    //script for GooberGame(made by Jason Sanchez)
 
     public GameObject matchingImage;
     private RectTransform slottableImage;

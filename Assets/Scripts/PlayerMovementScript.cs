@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//made Jason Sanchez
+
 public class PlayerMovementScript : MonoBehaviour
 {
 

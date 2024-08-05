@@ -1,23 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-//Made by Jason Sanchez
+//Made By Jason Sanchez
 
-public class ChangeScene : MonoBehaviour
+public class ScreenPopJason : MonoBehaviour
 {
-    public int index;
-    public string levelName;
+    public GameObject Minigame;
 
     public bool playerIsClose;
 
+
+    // Start is called before the first frame update
+
+    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
         {
-            SceneManager.LoadScene(index);
-            SceneManager.LoadScene(levelName);
+            Minigame.SetActive(true);
         }
     }
 
@@ -34,6 +35,7 @@ public class ChangeScene : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerIsClose = false;
+            Minigame.SetActive(false);
         }
     }
 }
