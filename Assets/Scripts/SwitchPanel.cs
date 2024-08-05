@@ -6,6 +6,7 @@ public class SwitchPanel : MonoBehaviour
 {
       public GameObject currentpanel;
       public GameObject settingspanel;
+    public GameObject questpanel;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,5 +25,11 @@ public class SwitchPanel : MonoBehaviour
             currentpanel.SetActive(false);
         }
         settingspanel.SetActive(true);
+    }
+
+    public void QuestPanel()
+    {
+        questpanel.SetActive(true);
+        currentpanel.SetActive(false);
     }
 }
