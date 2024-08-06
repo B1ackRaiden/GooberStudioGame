@@ -4,6 +4,8 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
+//made by Jason Sanchez
+
 public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update

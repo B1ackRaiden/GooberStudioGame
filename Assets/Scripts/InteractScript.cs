@@ -8,13 +8,10 @@ public class InteractScript : MonoBehaviour
 {
     public GameObject Interact;
     public bool npcIsClose;
+    public bool changeSceneIsClose;
 
     void Update()
     {
-        if (npcIsClose)
-        {
-            Interact.SetActive(true);
-        }
         
         if(Input.GetKeyDown(KeyCode.E))
             {
@@ -29,6 +26,12 @@ public class InteractScript : MonoBehaviour
             npcIsClose = true;
             Interact.SetActive(true);
         }
+
+        if (other.CompareTag("SceneChange"))
+        {
+            changeSceneIsClose = true;
+            Interact.SetActive(true);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -37,6 +40,12 @@ public class InteractScript : MonoBehaviour
         {
             npcIsClose = false;
             Interact.SetActive(false);
+        }
+
+        if (other.CompareTag("SceneChange"))
+        {
+            changeSceneIsClose = true;
+            Interact.SetActive(true);
         }
     }
 }
