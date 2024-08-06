@@ -22,7 +22,7 @@ public class SoundManager2 : MonoBehaviour
         }
     }
 
-   public void ChangeVolume()
+   public void ChangeSFXVolume()
    {
           AudioListener.volume = SoundSlider.value;
           Save();
