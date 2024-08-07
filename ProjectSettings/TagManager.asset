@@ -6,6 +6,7 @@ TagManager:
   tags:
   - NPC
   - SceneChange
+  - MGManager
   layers:
   - Default
   - TransparentFX
