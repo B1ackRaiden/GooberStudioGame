@@ -10,10 +10,12 @@ public class PlayerMovementScript : MonoBehaviour
     public Vector3 leftDirection;
     public Vector3 rightDirection;
 
+    private SpriteRenderer spriteRenderer;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -22,11 +24,14 @@ public class PlayerMovementScript : MonoBehaviour
         if(Input.GetKey(KeyCode.A))
         {
             GetComponent<Transform>().position += leftDirection;
+            spriteRenderer.flipX = true;
         }
 
-            if(Input.GetKey(KeyCode.D))
+        if(Input.GetKey(KeyCode.D))
         {
             GetComponent<Transform>().position += rightDirection;
+            spriteRenderer.flipX = false;
+           
         }
     }
 }
